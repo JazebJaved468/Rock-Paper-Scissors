@@ -7,11 +7,12 @@ function userInput(){
     let input = prompt("write input rock,paper or scissors");
     // let input = "RocK";
     let user_input = input.toLowerCase();
+    // return(userInput);
 
     // Artificial Intelligence
-    let user_in = user_input.slice(0,2) === "ro" ? "rock" : user_input.slice(0,2) === "pa" ? "paper" : user_input.slice(0,2) === "sc" ? "scissors" : console.log("Wrong input");
+    let suggested_input = user_input.slice(0) === "r" ? "rock" : user_input.slice(0,2) === "p" ? "paper" : user_input.slice(0,2) === "s" ? "scissors" : console.log("Wrong input");
     //
-    return (user_in);
+    return (suggested_input);
 }
 
 function computerInput(){
