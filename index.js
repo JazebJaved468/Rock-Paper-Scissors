@@ -69,6 +69,10 @@ function congrats(userScore, computerScore){
 
 // Message announcing winner when game completes successefully or when game is cancelled by the user
 function gameEnd(userScore, computerScore){ 
+
+    console.log(`Your Score ---> ${userScore}`);
+    console.log(`Computer Score ---> ${computerScore}`);
+    
     if(userScore === 5 || computerScore === 5){
         congrats(userScore, computerScore);
     }
