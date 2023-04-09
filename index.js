@@ -3,7 +3,7 @@ const P = "paper";
 const S = "scissors";
 
 
-
+// Taking user input
 function userInput(){
     let input = prompt("write input rock,paper or scissors");
 
@@ -25,6 +25,7 @@ function userInput(){
     
 }
 
+// Generating automatic computer input
 function computerInput(){
 
     let computer_options = ["rock", "paper", "scissors"]
@@ -33,6 +34,7 @@ function computerInput(){
 
 }
 
+// Playing Rounds
 function play(user, computer){
     // console.log("user =", user,);                // for debugging
     // console.log("computer =", computer);
@@ -58,10 +60,14 @@ function play(user, computer){
     
 }
 
+
+// Congratulatory message
 function congrats(userScore, computerScore){
     (userScore === 5) ? console.log("Congrats!! You win") : console.log("Sedd!! You lost") ;
 }
 
+
+// Message announcing winner when game completes successefully or when game is cancelled by the user
 function gameEnd(userScore, computerScore){ 
     if(userScore === 5 || computerScore === 5){
         congrats(userScore, computerScore);
@@ -71,6 +77,8 @@ function gameEnd(userScore, computerScore){
     }
 }
 
+
+// main game function
 function game(){
     let userScore = 0;
     let computerScore = 0;
@@ -106,10 +114,10 @@ function game(){
     gameEnd(userScore, computerScore);
 
     // console.log(`user = ${userScore} \n computer = ${computerScore} \n user + computer = ${userScore + computerScore}`); // for debugging
-
-    
+ 
 }
 
+// accessing HTML button
 const playgame = document.querySelector('button');
 playgame.addEventListener('click', game);
 
