@@ -4,10 +4,14 @@ const S = "scissors";
 
 
 function userInput(){
-    // let input = prompt("write input rock,paper or scissors");
-    let input = "RocK";
+    let input = prompt("write input rock,paper or scissors");
+    // let input = "RocK";
     let user_input = input.toLowerCase();
-    return (user_input);
+
+    // Artificial Intelligence
+    let user_in = user_input.slice(0,2) === "ro" ? "rock" : user_input.slice(0,2) === "pa" ? "paper" : user_input.slice(0,2) === "sc" ? "scissors" : console.log("Wrong input");
+    //
+    return (user_in);
 }
 
 function computerInput(){
@@ -29,6 +33,10 @@ function play(user, computer){
     else{
         return("computerwin");
     }
+}
+
+function congrats(userScore, computerScore){
+    (userScore === 5) ? console.log("Congrats!! You win") : console.log("COngrats!! You lost") ;
 }
 
 function game(){
@@ -54,6 +62,8 @@ function game(){
     }
 
     console.log(`user = ${userScore} \n computer = ${computerScore} \n user + computer = ${userScore + computerScore}`);
+
+    congrats(userScore, computerScore);
 }
 
 
