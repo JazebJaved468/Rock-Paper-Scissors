@@ -5,7 +5,7 @@ const S = "scissors";
 
 // Taking user input
 function userInput(){
-    let input = prompt("write input rock, paper or scissors");
+    let input = prompt("write input rock, pper or scissors");
 
     // console.log(input);             // for debugging
 
