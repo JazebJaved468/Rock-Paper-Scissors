@@ -67,6 +67,8 @@ function game(){
     congrats(userScore, computerScore);
 }
 
+const playgame = document.querySelector('button');
+playgame.addEventListener('click', game);
 
-game();
+
 
