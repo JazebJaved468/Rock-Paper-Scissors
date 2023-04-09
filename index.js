@@ -34,30 +34,28 @@ function play(user, computer){
 function game(){
     let userScore = 0;
     let computerScore = 0;
-    let round = 5;
-    for(let i = 1; i<=round ; i++){
-        console.log(`=====================Round ${i} ========================`);
+    let round = 1;
+    while(!(userScore === 5 || computerScore === 5)){
+        console.log(`=====================Round ${round} ========================`);
         let result = play(userInput(), computerInput());
-        
+
         if(result === "userwin"){
-            console.log(` i = ${i} , round = ${round}`)
             userScore++;
             console.log("you beats computer");
         }
         else if(result === "computerwin"){
-            console.log(` i = ${i} , round = ${round}`)
             computerScore++;
             console.log("computer beats you");
         }
         else{
-            console.log(` i = ${i} , round = ${round}`)
             console.log(result);
-            ++round;
         }
+        ++round;
     }
 
-    console.log(`user + computer = ${userScore + computerScore}`);
+    console.log(`user = ${userScore} \n computer = ${computerScore} \n user + computer = ${userScore + computerScore}`);
 }
+
 
 game();
 
