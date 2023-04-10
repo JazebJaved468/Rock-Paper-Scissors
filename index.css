@@ -7,8 +7,14 @@
 .btn{
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+::selection{
+  color: rgb(55, 211, 211);
 }
 
 button {
@@ -46,4 +52,4 @@ button {
   button span:not(hover) {
     transition: all 1s;
   }
-  
+
