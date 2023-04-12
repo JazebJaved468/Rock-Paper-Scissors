@@ -92,7 +92,7 @@ function game(){
         let result = play(userInput(), computerInput());
 
         if(result == undefined){
-            alert("you cancelled the game")
+            alert("You cancelled the game")
             break;
         }
 
