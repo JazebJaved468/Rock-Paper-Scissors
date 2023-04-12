@@ -38,7 +38,13 @@ function play(user, computer){
 
 // Congratulatory message
 function congrats(userScore, computerScore){
-    (userScore === 5) ? console.log("Congrats!! You win") : console.log("Sedd!! You lost") ;
+    let result = document.querySelector('#result');
+    if(userScore === 5){
+        result.textContent = "Congrats!! You Won"
+    }
+    else{
+        result.textContent = "Sedd!! You Lost"
+    }
 }
 
 
@@ -51,9 +57,9 @@ function gameEnd(userScore, computerScore){
     if(userScore === 5 || computerScore === 5){
         congrats(userScore, computerScore);
     }
-    else{
-        console.log("Game remains unfinished :(")
-    }
+    // else{
+    //     console.log("Game remains unfinished :(")
+    // }
 }
 let userScore = 0;
 let computerScore = 0;
@@ -64,34 +70,35 @@ function game(e){
     // let userScore = 0;
     // let computerScore = 0;
     // let level = 1;
-
-    let round = document.querySelector('#round');
-    round.textContent = `Round ${level}`;
-    // console.log(`=====================Round ${level} ========================`);
-    let result = play(userInput(e), computerInput(e));
-    if(result === "userwin"){
-        userScore++;
-        let user = document.getElementById('user-score');
-        user.textContent = `${userScore}`
-        let beat = document.querySelector('#beat');
-        beat.textContent = `You beat Computer`
-    }
-    else if(result === "computerwin"){
-        computerScore++;
-        let computer = document.getElementById('computer-score');
-        computer.textContent = `${computerScore}`
-        let beat = document.querySelector('#beat');
-        beat.textContent = `Computer beat You`
+    if(userScore < 5 && computerScore <5){
+        let round = document.querySelector('#round');
+        round.textContent = `Round ${level}`;
+        // console.log(`=====================Round ${level} ========================`);
+        let result = play(userInput(e), computerInput(e));
+        if(result === "userwin"){
+            userScore++;
+            let user = document.getElementById('user-score');
+            user.textContent = `${userScore}`
+            let beat = document.querySelector('#beat');
+            beat.textContent = `You beat Computer`
+        }
+        else if(result === "computerwin"){
+            computerScore++;
+            let computer = document.getElementById('computer-score');
+            computer.textContent = `${computerScore}`
+            let beat = document.querySelector('#beat');
+            beat.textContent = `Computer beat You`
+        }
+        else{
+            let beat = document.querySelector('#beat');
+            beat.textContent = `Tie!!!`
+        }
+        ++level;
     }
     else{
-        let beat = document.querySelector('#beat');
-        beat.textContent = `Tie!!!`
+        gameEnd(userScore, computerScore);
     }
-
-    ++level;
-
-    // gameEnd(userScore, computerScore);
-    }
+}
 
     
 
