@@ -71,8 +71,6 @@ function game(e){
     // let computerScore = 0;
     // let level = 1;
     if(userScore < 5 && computerScore <5){
-        let round = document.querySelector('#round');
-        round.textContent = `Round ${level}`;
         // console.log(`=====================Round ${level} ========================`);
         let result = play(userInput(e), computerInput(e));
         if(result === "userwin"){
@@ -94,6 +92,8 @@ function game(e){
             beat.textContent = `Tie!!!`
         }
         ++level;
+        let round = document.querySelector('#round');
+        round.textContent = `Round ${level}`;
     }
     else{
         gameEnd(userScore, computerScore);
