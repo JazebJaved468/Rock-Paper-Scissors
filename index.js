@@ -27,7 +27,6 @@ function userInput(){
 
 // Generating automatic computer input
 function computerInput(){
-
     let computer_options = ["rock", "paper", "scissors"]
     let random_index = Math.floor(Math.random() * computer_options.length);
     return(computer_options[random_index]);
@@ -118,12 +117,9 @@ function game(){
     gameEnd(userScore, computerScore);
 
     // console.log(`user = ${userScore} \n computer = ${computerScore} \n user + computer = ${userScore + computerScore}`); // for debugging
- 
 }
 
-// accessing HTML button
-const playgame = document.querySelector('button');
-playgame.addEventListener('click', game);
+
 
 
 
