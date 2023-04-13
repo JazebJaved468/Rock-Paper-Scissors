@@ -140,6 +140,16 @@ body{
   color:#1a8e88
 }
 
+/* beat starts*/
+#beat{
+  font-weight: 1000;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0px 0px 2px #1a8e88;
+}
+/* beat ends */
+
+/* choose weapon section starts */
 .weapon{
   width: 100%;
   /* justify-content: center; */
@@ -183,16 +193,24 @@ body{
 }
 
 
-/* beat */
-#beat{
-  font-weight: 1000;
-  text-align: center;
-  font-size: 2em;
-  text-shadow: 0px 0px 2px #1a8e88;
-}
+
 
 /* footer */
-.footer{
+/* .footer{
   background-color: #1a8e88;
   color: #282626;
+} */
+.footer{
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+  font-size: large;
+  height: 3vh;
+  background-color: #282626;
+  color: #1a8e88;
+}
+
+#credit{
+  display: inline-block;
+  font-size: larger;
 }
