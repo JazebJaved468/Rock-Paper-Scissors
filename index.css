@@ -39,6 +39,7 @@ body{
   background-color: #323030;
 }
 
+/* Congratulatory Message */
 #result{
   background-color: #282626;
   border: 3px solid black;
@@ -58,6 +59,7 @@ body{
   visibility: hidden;
 }
 
+/* rounds */
 #round{
   width: 70%;
   margin: auto;
@@ -66,7 +68,7 @@ body{
   
 }
 
-
+/* dynamic data starts */
 .data{
   /* border: 2px solid green; */
   width: 60%;
@@ -139,6 +141,7 @@ body{
 .data-text-num{
   color:#1a8e88
 }
+/* dynamic data ends */
 
 /* beat starts*/
 #beat{
@@ -163,12 +166,14 @@ body{
   color: #1a8e88;
   text-shadow: 0px 0px 2px #000000;
 }
+
 .selection-btn{
   /* border: 2px solid green; */
   width: 50%; 
   margin: auto;
   justify-content: center;
   gap: 1em;
+  margin-bottom: 2em;
 }
 
 .selection-btn button{
@@ -191,21 +196,16 @@ body{
   /* width: 100%; */
   filter:drop-shadow(0px 0px 5px #1a8e88);
 }
+/* choose weapon section ends */
 
 
-
-
-/* footer */
-/* .footer{
-  background-color: #1a8e88;
-  color: #282626;
-} */
+/* footer starts*/
 .footer{
   justify-content: center;
   align-items: center;
   color: #e5e7eb;
   font-size: large;
-  height: 3vh;
+  height: 4vh;
   background-color: #282626;
   color: #1a8e88;
 }
@@ -214,3 +214,4 @@ body{
   display: inline-block;
   font-size: larger;
 }
+/* footer ends*/
