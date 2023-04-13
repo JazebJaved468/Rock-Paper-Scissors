@@ -2,6 +2,16 @@
     box-sizing: border-box;
     margin: 0;  
     padding: 0;
+    font-family: 'Allan';
+}
+
+body{
+  background-color: #3c3939;
+}
+
+::selection{
+  color: #3c3939;
+  background-color: #1a8e88;
 }
 
 .flex-row{
@@ -15,19 +25,174 @@
 }
 
 .container{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 100%;
 }
 
-.selection-btn{
-  border: 2px solid green;
+#main-heading{
+  color: #1a8e88;
+  font-size: 4.5em;
+  text-align:center; 
+  margin-bottom: .15em;
+  padding: 0.2em;
+  font-family: 'Allerta Stencil';
+  background-color: #323030;
+}
+
+#result{
+  background-color: #282626;
+  border: 3px solid black;
+  border-radius: 2em;
+  width: 50%;
+  margin: auto;
+  padding: 0.05em;
+  text-align: center;
+  font-size: 5em;
+
+  background: rgba( 26, 142, 136, 0.5 );  
+  border-radius: 10px;
+  /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.visibility{
+  visibility: hidden;
+}
+
+#round{
+  width: 70%;
+  margin: auto;
+  color: #1a8e88;
+  text-shadow: 0px 0px 2px #000000;
+  
+}
+
+
+.data{
+  /* border: 2px solid green; */
   width: 60%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 1em;
+}
+
+.user-computer-guess{
+  width: 25%;
+  height: 50vh;
+  /* border: 2px solid red; */
+  align-items: center;
+  user-select: none;
+}
+
+.data-text{
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.user-image{
+  border: 2px solid black;
+  width: 100%;
+  border-radius: 48px;
+  background: linear-gradient(145deg, #403d3d, #363333);
+  box-shadow:  22px 22px 44px #282626,
+             -22px -22px 44px #504c4c;
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+
+.user-image img{
+  width: 60%;
+}
+
+.versus{
+  width: 20%;
+  /* border: 2px solid red; */
+}
+
+.versus img{
+  width: 100%;
+}
+
+.computer-image{
+  border: 2px solid black;
+  width: 100%;
+  border-radius: 48px;
+  background: linear-gradient(225deg, #403d3d, #363333);
+  box-shadow:  -22px 22px 44px #282626,
+               22px -22px 44px #504c4c;
+  flex: 1;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+
+.computer-image img{
+  width: 60%;
+}
+
+.data-text-num{
+  color:#1a8e88
+}
+
+.weapon{
+  width: 100%;
+  /* justify-content: center; */
+  height: 15vh;
+  gap: 1em;
+}
+
+#choose-weapon{
+  width: 70%;
+  margin: auto;
+  color: #1a8e88;
+  text-shadow: 0px 0px 2px #000000;
+}
+.selection-btn{
+  /* border: 2px solid green; */
+  width: 50%; 
   margin: auto;
   justify-content: center;
   gap: 1em;
 }
 
 .selection-btn button{
-  padding: 3em;
-  font-size: 1em;
+  width: 16%;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 2.8em;
+  background: #4b4848;
+  box-shadow: inset -22px -22px 44px #323030,
+              inset 22px 22px 44px #646060;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.selection-btn button:hover{
+  transform: scale(0.9);
+}
+
+.selection-btn button img{
+  /* width: 100%; */
+  filter:drop-shadow(0px 0px 5px #1a8e88);
+}
+
+
+/* beat */
+#beat{
+  font-weight: 1000;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0px 0px 2px #1a8e88;
+}
+
+/* footer */
+.footer{
+  background-color: #1a8e88;
+  color: #282626;
 }

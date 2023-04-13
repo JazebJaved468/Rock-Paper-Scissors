@@ -2,10 +2,9 @@ const R = "rock";
 const P = "paper";
 const S = "scissors";
 
-
 // Taking user input
 function userInput(e){
-    // console.log(e.target)
+    console.log(e.target)
     let input = e.target.getAttribute('id');           // this is telling that which button has triggered that click event
     return(input)
 }  
@@ -24,12 +23,29 @@ function play(user, computer){
     console.log("computer =", computer);
 
     if(user === computer){
+        let userImgParent = document.querySelector('.user-image');
+        userImgParent.innerHTML = `<img src="./${user}.png">`
+
+        let computerImgParent = document.querySelector('.computer-image');
+        computerImgParent.innerHTML = `<img src="./${computer}.png">`
+
         return("tie");
     }
     else if( user === R && computer === S || user === S && computer === P || user === P && computer === R){
+        let userImgParent = document.querySelector('.user-image');
+        userImgParent.innerHTML = `<img src="./${user}.png">`;
+
+        let computerImgParent = document.querySelector('.computer-image');
+        computerImgParent.innerHTML = `<img src="./${computer}.png">`;
         return("userwin");
     }
     else{
+        let userImgParent = document.querySelector('.user-image');
+        userImgParent.innerHTML = `<img src="./${user}.png">`;
+
+        let computerImgParent = document.querySelector('.computer-image');
+        computerImgParent.innerHTML = `<img src="./${computer}.png">`;
+
         return("computerwin");
     }
 }
@@ -39,27 +55,25 @@ function play(user, computer){
 // Congratulatory message
 function congrats(userScore, computerScore){
     let result = document.querySelector('#result');
+    result.classList.remove('visibility')
     if(userScore === 5){
-        result.textContent = "Congrats!! You Won"
+        result.textContent = "Congrats !! You Won"
+        
     }
     else{
-        result.textContent = "Sedd!! You Lost"
+        result.textContent = "Sedd !! You Lost"
     }
 }
 
 
 // Message announcing winner when game completes successefully or when game is cancelled by the user
 function gameEnd(userScore, computerScore){ 
-
-    console.log(`Your Score ---> ${userScore}`);
-    console.log(`Computer Score ---> ${computerScore}`);
+    // console.log(`Your Score ---> ${userScore}`);
+    // console.log(`Computer Score ---> ${computerScore}`);   // for Debugging
     
     if(userScore === 5 || computerScore === 5){
         congrats(userScore, computerScore);
     }
-    // else{
-    //     console.log("Game remains unfinished :(")
-    // }
 }
 let userScore = 0;
 let computerScore = 0;
@@ -67,49 +81,48 @@ let level = 1;
 
 // main game function
 function game(e){
-    // let userScore = 0;
-    // let computerScore = 0;
-    // let level = 1;
     if(userScore < 5 && computerScore <5){
-        // console.log(`=====================Round ${level} ========================`);
         let result = play(userInput(e), computerInput(e));
+
         if(result === "userwin"){
             userScore++;
+
             let user = document.getElementById('user-score');
-            user.textContent = `${userScore}`
+            user.textContent = `${userScore}`;
+
             let beat = document.querySelector('#beat');
-            beat.textContent = `You beat Computer`
+            beat.textContent = `"You beat Computer"`;
         }
         else if(result === "computerwin"){
             computerScore++;
+
             let computer = document.getElementById('computer-score');
             computer.textContent = `${computerScore}`
+
             let beat = document.querySelector('#beat');
-            beat.textContent = `Computer beat You`
+            beat.textContent = `"Computer beats You"`
         }
         else{
             let beat = document.querySelector('#beat');
-            beat.textContent = `Tie!!!`
+            beat.textContent = `"Tie!!!"`
         }
-        ++level;
-        let round = document.querySelector('#round');
-        round.textContent = `Round ${level}`;
+
+
+        if(userScore < 5 && computerScore < 5){
+            ++level;
+            let round = document.querySelector('#round');
+            round.textContent = `Round ${level} :`;
+        }
+        else{
+            gameEnd(userScore, computerScore);
+        }
+
     }
-    else{
-        gameEnd(userScore, computerScore);
-    }
+
 }
-
-    
-
-
-
-
-    // console.log(`user = ${userScore} \n computer = ${computerScore} \n user + computer = ${userScore + computerScore}`); // for debugging
 
 
 let btnList = document.querySelectorAll('button');
-
 
     btnList.forEach((button)=>{
         button.addEventListener('click',(e)=>{

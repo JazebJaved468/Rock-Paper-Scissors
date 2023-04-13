@@ -5,41 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+
     <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="container flex-col">
     <!-- Main heading -->
-        <h1 style="text-align:center; margin-bottom: 3em;">Rock Paper Scissors</h1>
-    <!-- Rounds -->
-        <h2 id="round">Round 1</h2>
-    <!-- Play buttons -->
-        <div class="selection-btn flex-row">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
-        </div>
-
-    <!-- Gesture Status -->
-        <h3 id="beat">STATUS</h3>
-
-    <!-- Score Table -->
-        <table>
-            <thead>
-                <td>User Score</td>
-                <td>Computer Score</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="user-score">0</td>
-                    <td id="computer-score">0</td>
-                </tr>
-            </tbody>
-        </table>
-
+        <h1 id="main-heading">Rock Paper Scissors</h1>
     <!-- Congratulations -->
-        <h1 id="result">RESULT</h1>
-        <script src="index.js"></script>
+        <h1 id="result" class="visibility"></h1>
+    <!-- Rounds -->
+        <h2 id="round">Round <span>1 : </span></h2>
+    <!-- Versus -->
+        <div class="data flex-row">
+            <div class="user-computer-guess flex-col">
+                <p class="data-text" style="margin-bottom:.8em;">You</p>
+                <div class="user-image">
+                    <img src="./rock.png">
+                </div>
+                <p id="user-score" class="data-text data-text-num" style="margin-top:.4em;">0</p>
+            </div>
+            <div class="versus">
+                <img src="versus.png" alt="">
+            </div>
+            <div class="user-computer-guess flex-col">
+                <p class="data-text" style="margin-bottom:.8em;">Computer</p>
+                <div class="computer-image"><img src="./scissors.png" alt=""></div>
+                <p id="computer-score" class="data-text data-text-num" style="margin-top:.4em;">0</p>
+            </div>
+        </div>
+    <!-- Gesture Status -->
+    <h3 id="beat">LET'S SEE WHO IS STRONGER !</h3>
+
+
+    <!-- Play buttons -->
+
+        <h2 id="choose-weapon">Choose your Weapon :</h2>
+        <div class="selection-btn flex-row">
+            <button id="rock"><img id="rock" src="./rock.png" alt="rock" width="100%"></button>
+            <button id="paper"><img id="paper" src="./paper.png" alt="paper" width="80%"></button>
+            <button id="scissors"><img id="scissors" src="./scissors.png" alt="scissors" width="100%"></button>
+        </div>
     </div>
+
+    <div class="footer">
+        <p>hello</p>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
