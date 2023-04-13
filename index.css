@@ -4,3 +4,30 @@
     padding: 0;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  border: 2px solid red;
+  width: 100%;
+}
+
+.selection-btn{
+  border: 2px solid green;
+  width: 60%;
+  margin: auto;
+  justify-content: center;
+  gap: 1em;
+}
+
+.selection-btn button{
+  padding: 3em;
+  font-size: 1em;
+}
