@@ -83,7 +83,6 @@ body{
   height: 50vh;
   /* border: 2px solid red; */
   align-items: center;
-  user-select: none;
 }
 
 .data-text{
@@ -104,6 +103,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center ;
+  user-select: none;
 }
 
 .user-image img{
@@ -132,6 +132,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center ;
+  user-select: none;
 }
 
 .computer-image img{
