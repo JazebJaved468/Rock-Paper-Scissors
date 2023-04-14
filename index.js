@@ -51,11 +51,11 @@ function play(user, computer){
 }
 
 
-
-// Congratulatory message
+// Congratulatory message and play again
 function congrats(userScore, computerScore){
+    let resultSection = document.querySelector('.result-section');
     let result = document.querySelector('#result');
-    result.classList.remove('visibility')
+    resultSection.classList.remove('display')
     if(userScore === 5){
         result.textContent = "Congrats !! You Won"
         
@@ -75,6 +75,13 @@ function gameEnd(userScore, computerScore){
         congrats(userScore, computerScore);
     }
 }
+
+
+// refresh game (play again)
+function playAgain(){
+    location.reload();
+}
+
 let userScore = 0;
 let computerScore = 0;
 let level = 1;
@@ -122,7 +129,7 @@ function game(e){
 }
 
 
-let btnList = document.querySelectorAll('button');
+let btnList = document.querySelectorAll('.button');
 
     btnList.forEach((button)=>{
         button.addEventListener('click',(e)=>{
@@ -130,6 +137,9 @@ let btnList = document.querySelectorAll('button');
         })
     })
 
+let playAgainBtn = document.querySelector('.btn');
+console.log(playAgainBtn)
+playAgainBtn.addEventListener('click', playAgain);
 
 
 
