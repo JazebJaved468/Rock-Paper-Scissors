@@ -15,6 +15,8 @@ Note: If you want to play version 1 which is without gui than you can clone my m
 # Version: 2 Update
 We are thrilled to announce that we have successfully launched the Graphic User Interface of our Rock Paper Scissor game, we have tried our best to make it as user friendly as possible and easy to use.
 
+Note: The code of version 2 is in the separate branch named "rps-ui". I haven't merged the branches yet intentionally.
+
 # How to play version: 2
 1) Go here -> https://jazebjaved468.github.io/Rock-Paper-Scissors/
 2) Choose your weapon.
